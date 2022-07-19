@@ -1,12 +1,11 @@
 %-------------------------
 % Resume in Latex
-% Author : Ran Cheng
+% Author : Song Liu
 % Adapted from: Indu dwivedi, Sourabh Bajaj
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,10pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -103,13 +102,14 @@
 \begin{table}[]
 \begin{tabular*}{\textwidth}{lc@{\extracolsep{\fill}}r}
 \begin{tabular}{l}
-\textbf{\huge \textcolor{titleblue}{Ran Cheng}} \\
+\textbf{\huge \textcolor{titleblue}{Song Liu}} \\
 \\
-An Intelligent Robotics Researcher   
-\end{tabular}  &  & \begin{tabular}{@{}rr@{}} \textcolor{titleblue}{\includegraphics[width=0.017\linewidth]{imgs/location(1).pdf}} MLL 411, McGill University, Montreal, Canada & \multirow{3}{*}{\includegraphics[width=0.096\linewidth]{imgs/githubpage.pdf}} \\
-\includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} ran.cheng2@mail.mcgill.ca                     &                   \\
-\includegraphics[width=0.017\linewidth]{imgs/home(1).pdf} \href{http://rancheng.github.io}{rancheng.github.io}                            &                   \\
-\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} 774-823-4304                                  &                   
+\end{tabular}  &  & \begin{tabular}{@{}rr@{}} \textcolor{titleblue}
+  \quad & \multirow{3}{*}
+{\includegraphics[width=0.096\linewidth]{imgs/githubpage.pdf}} \\
+\includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} vancirprince@gmail.com                     &                   \\
+\includegraphics[width=0.017\linewidth]{imgs/home(1).pdf} \href{https://vancir.github.io/}{vancir.github.io}                            &                   \\
+\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} (+86) 15600498516                                  &                   
 \end{tabular}  \\ 
 \end{tabular*}
 \end{table}
@@ -121,19 +121,11 @@ An Intelligent Robotics Researcher
 \shorterSection{\textcolor{titleblue}{Education}}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {McGill University, Computer Science}{Montreal, Canada}     {Master of Science in Computer Science}{Expected May 2020}{
+      {Xiamen University, School of Informatics}{Xiamen, China}     {Bachelor of Engineering}{Sep 2015 - Jun 2019}{
     %   \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
-      \resumeItemNoBullet{Relevant Coursework}{Intelligent Robotics, Reinforcement Learning, Applied Machine Learning}
+      \resumeItemNoBullet{Relevant Coursework}{Algorithms, Principles of Operating Systems,  Principles of Compilers}
     }
-    \resumeSubheading
-      {Coursera}{Online}     {Honored Degrees \& Long-term Community Contributor}{Aug 2015 - Aug 2017}{
-      \resumeItemNoBullet{Completed Courses}{Neural Network for Machine Learning (UToronto), Robotics: Specialization (UPenn), Machine Learning (Stanford)}
-    }
-    \resumeSubheading
-      {Tongji University, School of Software Engineering}{Shanghai, China}     {Bachelor of Engineer, Software Engineering;  GPA: 3.89/4.0}{Aug 2011 - Aug 2015}{
-      \resumeItemNoBullet{Honors and Awards}{Outstanding Diploma thesis, National Aspiration Fellowship, Second Class Prize Fellowship, Social Activism Award, IBM
-Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge, a Robot Competition Conference) Technician}
-    }
+    
   \resumeSubHeadingListEnd
 
 % %-----------ACADEMIC PROJECTS AND INTERNSHIPS-----------------
@@ -152,64 +144,75 @@ Outstanding Contribution Award, Microsoft Imagine Cup, FTC (First Tech Challenge
 % \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
-\shorterSection{\textcolor{titleblue}{Experience}}
+\shorterSection{\textcolor{titleblue}{Work}}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Mobile Robotics Lab, McGill University}{Montreal, Canada}
-      {Research Assistant, Supervisor: \textbf{Gregory Dudek}}{Sep 2017 - Now}
+      {QI-ANXIN Technology Research Institute}{Beijing, China}
+      {Research and Development Engineer, Supervisor: \textbf{Lingyun Ying}}{Aug 2019 - Now}
       \resumeItemListStart
-        \resumeItem{Deep Monocular VO}
-          { Designed a semi-supervised monocular depth estimator for video using sparse bundle adjustment in a sliding window, achieved 0.117 (top5) RMSE in \textbf{NYU v2} and 2.981 (top10) RMSE in \textbf{Kitti eigen-split}. backbone is Unet+CSPN, trained with semi-dense map point tracked by VO, implemented with \textbf{PyTorch}. }
-        \resumeItem{NavGuideNet}
-          {A \textbf{synthesized hierarchical neural network} for autonomous navigation in complex environment and variant landscapes (tested in field/underwater environments). Backbone \textbf{encoder} is \textbf{Resnet18}, \textbf{latent code} was concaternated with control signals and \textbf{decoder} is \textbf{de-convolution network} (transposed convolution)}
-        \resumeItem{Deep RL Auto Driving (Sim2Real)}
-          {Re-implemented CAD2RL in python and extended to multiple policy gradient based backends \textbf{(A3C+LSTM)} in continuous action space, simulator is \textbf{Microsoft AirSim}, tested on RC car and UAV.
-          }
+        \resumeItem{MacOS Sandbox for Malware Analysis}
+          { Designed and implemented the \textbf{first} macOS sandbox system in China. For macOS versions below 10.15, I read the source code of \textbf{XNU kernel}, used the Mandatory Access Control Framework(\textbf{MACF}) to monitor \textbf{process behavior} and \textbf{file operations}, wrote Network Kernel Extension(\textbf{NKE}) to capture \textbf{network traffic and behavior} respectively, and use threaded to send the monitoring data from kernel mode to user mode, and wrote a client at user mode to receive the behavior data from kernel mode. For macOS versions 10.15 and above, the previous mechanism was deprecated, so I developed a new system using the EndPoint Security Framework(\textbf{ESF}) and Network Extension(\textbf{NE}) for monitoring and capturing behavioral data. \textbf{Apple Script} was used to write a dynamic traversal tool for macOS apps to simulate user interaction and trigger malicious behavior. }
+        \resumeItem{Static and Dynamic Analysis Tool for Android Apps}
+          { Developed a static analysis tool based on \textbf{AndroGuard}, with the same analysis capability as \textbf{VirusTotal}. Combined the depth-first search(\textbf{DFS}) algorithm and breadth-first search(\textbf{BFS}) algorithm to traverse the UI of Android App.}
+        \resumeItem{Continuous Fuzzing Platform}
+          { A \textbf{fuzzing infrastructure} is used to schedule and allocate resources, perform \textbf{continuous} and \textbf{large-scale} fuzzing of target software, and obtain various monitoring data and performance metrics. Various frameworks and middleware are used, such as MongoDB, InfluxDB, Fluentd, Redis, Amazon S3. Integrated multiple \textbf{fuzzing engines}, and supports fuzzing multiple targets on multiple operating system platforms.  }
+        \resumeItem{TianWen: Dependency Analysis Platform for Software Supply Chain}
+          { Developed a crawler to continuously crawl software binaries. Built and deployed \textbf{graph database cluster}. Optimized database query performance to support querying \textbf{extremely complex} graph information in seconds, and wrote tools to visualize large amounts of graph data.  }
+        \resumeItem{CVE Information Extraction Tool}
+          { Based on Named Entity Recognition(\textbf{NER}) theory, we use \textbf{BiLSTM-CRF} model to extract the \textbf{vulnerability function}, \textbf{vulnerability version} and \textbf{vulnerability source path} from the unstructured official description information of CVE vulnerabilities, with an accuracy rate of about \textbf{88\%}. }
+		\resumeItem{pySnoopSnitch: Android Firmware Patch Existence Detection Tool}
+          { Rewrote the \textbf{SnoopSnitch} project code in Python. Supports checking the presence of patches in Android firmware using the \textbf{full core performance} of the server and generating a heat map of patch misses. }
+        \resumeItem{String filter}
+          { A tool for filtering strings dumped from memory which contain a large number of strings that are neither recognizable nor readable by humans, and also contain many duplicate strings that we don't care about that are contained in dependent libraries. I combine \textbf{Shannon entropy} and \textbf{Markov chains} to filter strings, and use \textbf{bloom filters} to filter library strings with excellent time and space efficiency. }
       \resumeItemListEnd
 
     \resumeSubheading
-      {iLab Tongji/University of South California}{Shanghai, China, Los Angeles, USA}
-      {Research Assistant, Supervisor: \textbf{Jianwei Lu, Laurent Itti}}{Apr 2015 - Jul 2017}
+      {Institute of Information Engineering, Chinese Academy of Sciences}{Beijing, China}
+      {Research Intern, Supervisor: \textbf{Feng Li}}{Jul 2018 - Sep 2018}
       \resumeItemListStart
-        \resumeItem{SLAM Fusion}
-          {Vision (monocular) LiDar fusion with direct method (jointly optimize optical flow with Sparse Bundle Adjustment on ORB features) extra constraint from LiDar helps eliminating depth from null space. }
-        \resumeItem{Visual SLAM with Saliency}
-          { joint optimizing the graph (G2O) with salient voting as extra binary edges.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {UCLA}{Los Angeles, USA}
-      {Research Assistant, Supervisor: \textbf{Yi Xing}}{Jul 2015 - Jan 2016}
-      \resumeItemListStart
-        \resumeItem{Code Parallelization}
-          {optimized their RNA analysis tool, [stable release (\href{http://rnaseq-mats.sourceforge.net/rmats3.0.9/}{\textcolor{linkblue}{rMATS 3.0.9}})], binding the large matrix calculations with C11 (SSE/AVX vectorization, Intel) and CUDA (cuBLAS , Nvidia) }
+        \resumeItem{IO2BO Vulnerability Automatic Detection}
+          { Performed the \textbf{infra-procedural} analysis and \textbf{inter-procedural} analysis on the source code based on \textbf{Klee}. Modified the Klee to read target files as input for \textbf{concolic execution}. When executing, add constraints to the state that may have vulnerabilities and pass the symbolic expression to the \textbf{constraint solver}, and determine whether there is an Integer-Overflow-to-Buffer-Overflow(\textbf{IO2BO}) vulnerability based on the result. }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-%-----------PROJECTS/SKILLS-----------------
-\shorterSection{\textcolor{titleblue}{Projects}}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Visual SLAM}
-     {
-     Comprehensively \textbf{re-implemented} \href{https://github.com/rancheng/dso_understands}{\textcolor{linkblue}{DSO}} and annotated with exhaustive explains.
-     }
-    \resumeSubItem{Deep Monocular Dense 3D Reconstruction}{Dense 3D reconstruction with \textbf{monodepth2} initialized Visual Odometry, leveraging traditional photometric consistancy, occlusion discrepancy, and local geometrical-smooth assumptions to \textbf{optimize depth estimation} (\textbf{LM} method) and \textbf{register} 3D map point clouds.}
-    \resumeSubItem{Abstraction Augmented Deep RL}
-      {Abstract rgb image with Unet shaped network to digest image in latent representation, and learn from latent inputs, average convergence time increased 27.3\%, maximum reward (10M iterations) is 1.21 times than baseline model without abstraction augmentation, experiments conducted under self-collected dataset from AirSim simulator (\href{https://github.com/rancheng/AirSimProjects}{\textcolor{linkblue}{github}})}
-    \resumeSubItem{Forgetting Model for BP}
-      {Introduced forgetting model for back propagation as in gradient dynamic routine, inspired from forgetting curve, I invented forgetting factor to regulate delta weights updates (\href{https://rancheng.github.io/forgetting-model/}{\textcolor{linkblue}{math proof}})}
-    \resumeSubItem{LOAM}{extended LOAM (LiDAR Odometry and Mapping) with co-visibility check, optimized with Ceres optimizer and asynchronous threading}
-  \resumeSubHeadingListEnd
+  
 
 %-----------Addtional Experience & Achievements-----------------
 \shorterSection{\textcolor{titleblue}{Publications}}
   \resumeSubHeadingListStart
   \small
-        \item{Navigation in the Service of Enhanced Pose Estimation, Travis Manderson, \textbf{Ran Cheng}, David Meger and Gregory Dudek, \textbf{ISER 2018}, \href{http://www.cim.mcgill.ca/~travism/authors/ran-cheng/}{\textcolor{linkblue}{paper}}}
+  		\item{Detecting Logical Bugs of DBMS with Coverage-based
+              Guidance, Y. Liang, \textbf{S. Liu}, H. Hu, \textbf{USENIX 2022}}
         \vspace{-5pt}
-        \item{Vision-Based Autonomous Underwater Swimming in Dense Coral for Combined Collision Avoidance and Target Selection, T. Manderson, \textbf{R. Cheng}, D. Meger, G. Dudek, \textbf{IROS 2018}, \href{http://www.cim.mcgill.ca/~travism/authors/ran-cheng/}{\textcolor{linkblue}{paper}}}
+        
+        \item{Large-scale Security Measurements on the Android Firmware Ecosystem, Q. Hou, W. Diao, Y. Wang, X. Liu, \textbf{S. Liu}, L. Ying, S. Guo, Y. Li, M. Nie, H. Duan, \textbf{ICSE 2022}}
+        \vspace{-5pt}
   \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS/SKILLS-----------------
+\shorterSection{\textcolor{titleblue}{Projects}}
+  \resumeSubHeadingListStart
+    \resumeSubItem{CTF Wiki}
+     {
+     The CTF Wiki is an open source knowledge base about CTF competitions. I contributed most of the content of the \textbf{reverse engineering} chapter of the Wiki (\href{https://github.com/ctf-wiki/ctf-wiki}{\textcolor{linkblue}{github}}, 5.6k stars)
+     }
+    \resumeSubItem{Awesome-Binary-Similarity}
+      { An awesome list of binary code similarity papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Similarity}{\textcolor{linkblue}{github}}, 178 stars)
+	}
+    \resumeSubItem{Awesome-Binary-Rewriting}
+      { An awesome list of binary rewriting papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Rewriting}{\textcolor{linkblue}{github}}, 99 stars)
+	}
+	\resumeSubItem{PyPi-Typosquatting-Graph}
+     { Analyzing and visualizing \textbf{typosquatting} for Python packages hosted on PyPi.org.  I obtained all python package names and created a \textbf{trie tree}, then calculated the \textbf{edit distance} between the names and used a \textbf{force-directed algorithm} to draw the graph   (\href{https://github.com/Vancir/PyPi-Typosquatting-Graph}{\textcolor{linkblue}{github}})}
+    \resumeSubItem{Fugitive Consortium}
+      { A blockchain platform based on \textbf{Hyperledger Fabric}. It is written in Java and starts a network topology consisting of docker containers. Chaincode is written to add, delete, query and change information in the ledger  (\href{https://github.com/Vancir/fugitivec}{\textcolor{linkblue}{github}})
+	}
+
+  \resumeSubHeadingListEnd
+  
+  
+  
 %-------------------------------------------
 \end{document}
