@@ -109,7 +109,7 @@
 {\includegraphics[width=0.096\linewidth]{imgs/githubpage.pdf}} \\
 \includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} vancirprince@gmail.com                     &                   \\
 \includegraphics[width=0.017\linewidth]{imgs/home(1).pdf} \href{https://vancir.github.io/}{vancir.github.io}                            &                   \\
-\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} (+86) 15600498516                                  &                   
+\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} (+1) 8143216052                                  &                   
 \end{tabular}  \\ 
 \end{tabular*}
 \end{table}
@@ -120,6 +120,11 @@
 %-----------EDUCATION-----------------
 \shorterSection{\textcolor{titleblue}{Education}}
   \resumeSubHeadingListStart
+  \resumeSubheading
+      {The Pennsylvania State University, College of Information Sciences and Technology}{PA, USA}     {Doctor of Philosophy}{Aug 2022 - Now}{
+      \resumeItemNoBullet{Research Keywords}{Software Security, DBMS Fuzzing, Directed Fuzzing}
+    }
+
     \resumeSubheading
       {Xiamen University, School of Informatics}{Xiamen, China}     {Bachelor of Engineering}{Sep 2015 - Jun 2019}{
     %   \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
@@ -127,6 +132,27 @@
     }
     
   \resumeSubHeadingListEnd
+
+
+
+%-----------Addtional Experience & Achievements-----------------
+\shorterSection{\textcolor{titleblue}{Publications}}
+  \resumeSubHeadingListStart
+  \small
+  		\item{VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks (\href{https://vancir.github.io/assets/pdf/ye_viper.pdf}{\textcolor{linkblue}{link}}), \textbf{USENIX 2023}}
+        \vspace{-5pt}
+        
+        \item{Can We Trust the Phone Vendors? Comprehensive Security Measurements on the Android Firmware Ecosystem, \textbf{TSE 2023}}
+        \vspace{-5pt}
+        
+  		\item{Detecting Logical Bugs of DBMS with Coverage-based Guidance (\href{https://vancir.github.io/assets/pdf/liang_sqlright.pdf}{\textcolor{linkblue}{link}}), \textbf{USENIX 2022}}
+        \vspace{-5pt}
+        
+        \item{Large-scale Security Measurements on the Android Firmware Ecosystem (\href{https://vancir.github.io/assets/pdf/hou_andscanner.pdf}{\textcolor{linkblue}{link}}), \textbf{ICSE 2022}}
+        \vspace{-5pt}
+  \resumeSubHeadingListEnd
+
+
 
 % %-----------ACADEMIC PROJECTS AND INTERNSHIPS-----------------
 % \shorterSection{Academic Projects and internships}
@@ -149,7 +175,7 @@
 
     \resumeSubheading
       {QI-ANXIN Technology Research Institute}{Beijing, China}
-      {Research and Development Engineer, Supervisor: \textbf{Lingyun Ying}}{Aug 2019 - Now}
+      {Research and Development Engineer, Supervisor: \textbf{Lingyun Ying}}{Aug 2019 - Aug 2022}
       \resumeItemListStart
         \resumeItem{MacOS Sandbox for Malware Analysis}
           { Designed and implemented the \textbf{first} macOS sandbox system in China. For macOS versions below 10.15, I read the source code of \textbf{XNU kernel}, used the Mandatory Access Control Framework(\textbf{MACF}) to monitor \textbf{process behavior} and \textbf{file operations}, wrote Network Kernel Extension(\textbf{NKE}) to capture \textbf{network traffic and behavior} respectively, and use threaded to send the monitoring data from kernel mode to user mode, and wrote a client at user mode to receive the behavior data from kernel mode. For macOS versions 10.15 and above, the previous mechanism was deprecated, so I developed a new system using the EndPoint Security Framework(\textbf{ESF}) and Network Extension(\textbf{NE}) for monitoring and capturing behavioral data. \textbf{Apple Script} was used to write a dynamic traversal tool for macOS apps to simulate user interaction and trigger malicious behavior. }
@@ -163,8 +189,8 @@
           { Based on Named Entity Recognition(\textbf{NER}) theory, we use \textbf{BiLSTM-CRF} model to extract the \textbf{vulnerability function}, \textbf{vulnerability version} and \textbf{vulnerability source path} from the unstructured official description information of CVE vulnerabilities, with an accuracy rate of about \textbf{88\%}. }
 		\resumeItem{pySnoopSnitch: Android Firmware Patch Existence Detection Tool}
           { Rewrote the \textbf{SnoopSnitch} project code in Python. Supports checking the presence of patches in Android firmware using the \textbf{full core performance} of the server and generating a heat map of patch misses. }
-        \resumeItem{String filter}
-          { A tool for filtering strings dumped from memory which contain a large number of strings that are neither recognizable nor readable by humans, and also contain many duplicate strings that we don't care about that are contained in dependent libraries. I combine \textbf{Shannon entropy} and \textbf{Markov chains} to filter strings, and use \textbf{bloom filters} to filter library strings with excellent time and space efficiency. }
+%        \resumeItem{String filter}
+%          { A tool for filtering strings dumped from memory which contain a large number of strings that are neither recognizable nor readable by humans, and also contain many duplicate strings that we don't care about that are contained in dependent libraries. I combine \textbf{Shannon entropy} and \textbf{Markov chains} to filter strings, and use \textbf{bloom filters} to filter library strings with excellent time and space efficiency. }
       \resumeItemListEnd
 
     \resumeSubheading
@@ -177,32 +203,18 @@
 
   \resumeSubHeadingListEnd
   
-
-%-----------Addtional Experience & Achievements-----------------
-\shorterSection{\textcolor{titleblue}{Publications}}
-  \resumeSubHeadingListStart
-  \small
-  		\item{Detecting Logical Bugs of DBMS with Coverage-based
-              Guidance, Y. Liang, \textbf{S. Liu}, H. Hu, \textbf{USENIX 2022}}
-        \vspace{-5pt}
-        
-        \item{Large-scale Security Measurements on the Android Firmware Ecosystem, Q. Hou, W. Diao, Y. Wang, X. Liu, \textbf{S. Liu}, L. Ying, S. Guo, Y. Li, M. Nie, H. Duan, \textbf{ICSE 2022}}
-        \vspace{-5pt}
-  \resumeSubHeadingListEnd
-
-
 %-----------PROJECTS/SKILLS-----------------
 \shorterSection{\textcolor{titleblue}{Projects}}
   \resumeSubHeadingListStart
     \resumeSubItem{CTF Wiki}
      {
-     The CTF Wiki is an open source knowledge base about CTF competitions. I contributed most of the content of the \textbf{reverse engineering} chapter of the Wiki (\href{https://github.com/ctf-wiki/ctf-wiki}{\textcolor{linkblue}{github}}, 5.6k stars)
+     The CTF Wiki is an open source knowledge base about CTF competitions. I contributed most of the content of the \textbf{reverse engineering} chapter of the Wiki (\href{https://github.com/ctf-wiki/ctf-wiki}{\textcolor{linkblue}{github}}, 7.1k stars)
      }
     \resumeSubItem{Awesome-Binary-Similarity}
-      { An awesome list of binary code similarity papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Similarity}{\textcolor{linkblue}{github}}, 178 stars)
+      { An awesome list of binary code similarity papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Similarity}{\textcolor{linkblue}{github}}, 359 stars)
 	}
     \resumeSubItem{Awesome-Binary-Rewriting}
-      { An awesome list of binary rewriting papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Rewriting}{\textcolor{linkblue}{github}}, 99 stars)
+      { An awesome list of binary rewriting papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Rewriting}{\textcolor{linkblue}{github}}, 172 stars)
 	}
 	\resumeSubItem{PyPi-Typosquatting-Graph}
      { Analyzing and visualizing \textbf{typosquatting} for Python packages hosted on PyPi.org.  I obtained all python package names and created a \textbf{trie tree}, then calculated the \textbf{edit distance} between the names and used a \textbf{force-directed algorithm} to draw the graph   (\href{https://github.com/Vancir/PyPi-Typosquatting-Graph}{\textcolor{linkblue}{github}})}
