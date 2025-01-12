@@ -76,6 +76,16 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\experience}[2]{
+  \vspace{+1pt}\item[]
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & [#2]
+  \end{tabular*}\vspace{-4pt}
+}
+
+\newcounter{sqlitebug}
+\newcommand{\bug}[1]{\stepcounter{sqlitebug}\href{https://sqlite.org/forum/info/#1}{\textcolor{linkblue}{[\thesqlitebug]}}\>}
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -90,8 +100,6 @@
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING-----------------
@@ -107,9 +115,9 @@
 \end{tabular}  &  & \begin{tabular}{@{}rr@{}} \textcolor{titleblue}
   \quad & \multirow{3}{*}
 {\includegraphics[width=0.096\linewidth]{imgs/githubpage.pdf}} \\
-\includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} vancirprince@gmail.com                     &                   \\
+\includegraphics[width=0.017\linewidth]{imgs/email(1).pdf} songliu@psu.edu                     &                   \\
 \includegraphics[width=0.017\linewidth]{imgs/home(1).pdf} \href{https://vancir.github.io/}{vancir.github.io}                            &                   \\
-\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} (+1) 8143216052                                  &                   
+\includegraphics[width=0.017\linewidth]{imgs/phone(1).pdf} 814-321-6052                                  &                   
 \end{tabular}  \\ 
 \end{tabular*}
 \end{table}
@@ -121,110 +129,197 @@
 \shorterSection{\textcolor{titleblue}{Education}}
   \resumeSubHeadingListStart
   \resumeSubheading
-      {The Pennsylvania State University, College of Information Sciences and Technology}{PA, USA}     {Doctor of Philosophy}{Aug 2022 - Now}{
-      \resumeItemNoBullet{Research Keywords}{Software Security, DBMS Fuzzing, Directed Fuzzing}
+    {The Pennsylvania State University}{Pennsylvania, USA}     
+    {Ph.D. Student in Informatics}{Aug 2022 - Now}{
+      % \resumeItemNoBullet{Research Keywords}{Software Security, DBMS Fuzzing, Directed Fuzzing}
     }
 
-    \resumeSubheading
-      {Xiamen University, School of Informatics}{Xiamen, China}     {Bachelor of Engineering}{Sep 2015 - Jun 2019}{
-    %   \resumeItemNoBullet{Thesis}{Guided Robust Visual Navigation with Deep Learning}
-      \resumeItemNoBullet{Relevant Coursework}{Algorithms, Principles of Operating Systems,  Principles of Compilers}
+  \resumeSubheading
+    {Xiamen University}{Xiamen, China}
+    {B.E. in Computer Science and Technology}{Sep 2015 - Jun 2019}{
+      % \resumeItemNoBullet{Relevant Coursework}{Algorithms, Principles of Operating Systems,  Principles of Compilers}
     }
-    
   \resumeSubHeadingListEnd
 
 
 
 %-----------Addtional Experience & Achievements-----------------
-\shorterSection{\textcolor{titleblue}{Publications}}
-  \resumeSubHeadingListStart
-  \small
-  		\item{VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks (\href{https://vancir.github.io/assets/pdf/ye_viper.pdf}{\textcolor{linkblue}{link}}), \textbf{USENIX 2023}}
-        \vspace{-5pt}
-        
-        \item{Can We Trust the Phone Vendors? Comprehensive Security Measurements on the Android Firmware Ecosystem, \textbf{TSE 2023}}
-        \vspace{-5pt}
-        
-  		\item{Detecting Logical Bugs of DBMS with Coverage-based Guidance (\href{https://vancir.github.io/assets/pdf/liang_sqlright.pdf}{\textcolor{linkblue}{link}}), \textbf{USENIX 2022}}
-        \vspace{-5pt}
-        
-        \item{Large-scale Security Measurements on the Android Firmware Ecosystem (\href{https://vancir.github.io/assets/pdf/hou_andscanner.pdf}{\textcolor{linkblue}{link}}), \textbf{ICSE 2022}}
-        \vspace{-5pt}
-  \resumeSubHeadingListEnd
+\shorterSection{\textcolor{titleblue}{Conference Proceedings}}
+  \begin{enumerate}[label={[\arabic*]}]
 
+    % \item Optimizating Directed Greybox Fuzzing. \\
+    %       \textbf{Song Liu}, Hengkai Ye, and Hong Hu. \\
+    %       Note: the paper is still under submission and the title is the research goal.
 
+    \item VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks. \\
+          Hengkai Ye, \textbf{Song Liu}, Zhechang Zhang, and Hong Hu. \\
+          In \textit{Proceedings of the 32nd USENIX Security Symposium (USENIX Security 2023)}.
 
-% %-----------ACADEMIC PROJECTS AND INTERNSHIPS-----------------
-% \shorterSection{Academic Projects and internships}
-%   \resumeSubHeadingListStart
-%   \small
-%     \item{
-%      \textbf{Languages}{: Python, C++, SQL, Java, Swift}
-%      \hfill
-%      \textbf{Technologies}{: GCP, AWS, GitHub, GitLab, Docker}
-%     }
-%     \vspace{-5pt}
-%     \item{
-%      \textbf{Libraries}{: TensorFlow, PyTorch, Keras, Scikit-Learn, Numpy, Pandas, Spark, Jupyter, OpenCV, PIL, OpenCL, OpenGL, CUDA}
-%     }
-% \resumeSubHeadingListEnd
+    \item Can We Trust the Phone Vendors? Comprehensive Security Measurements on the Android Firmware Ecosystem. \\
+          Qinsheng Hou, Wenrui Diao, Yanhao Wang, Chenglin Mao, Lingyun Ying, \textbf{Song Liu}, Xiaofeng Liu, Yuanzhi Li, Shanqing Guo, Meining Nie, and Haixin Duan. \\
+          In \textit{IEEE Transactions on Software Engineering (TSE 2023)}.
+      
+    \item Detecting Logical Bugs of DBMS with Coverage-based Guidance. \\
+          Yu Liang, \textbf{Song Liu}, and Hong Hu. \\
+          In \textit{Proceedings of the 31st USENIX Security Symposium (USENIX Security 2022)}.
+
+    \item Large-scale Security Measurements on the Android Firmware Ecosystem. \\
+          Qinsheng Hou, Wenrui Diao, Yanhao Wang, Xiaofeng Liu, \textbf{Song Liu}, Lingyun Ying, Shanqing Guo, Yuanzhi Li, Meining Nie, and Haixin Duan. \\
+          In \textit{44th IEEE/ACM International Conference on Software Engineering (ICSE 2022)}.
+
+  \end{enumerate}
+
+\shorterSection{\textcolor{titleblue}{Industrial Conference}}
+  \begin{enumerate}[label={[\arabic*]}]
+    \item One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks. \\
+          Hengkai Ye, \textbf{Song Liu}, Zhechang Zhang, and Hong Hu. \\
+          In \textit{Black Hat Asia Briefings (Black Hat Asia 2024)}.
+  \end{enumerate}
+
 
 %-----------EXPERIENCE-----------------
-\shorterSection{\textcolor{titleblue}{Work}}
+\shorterSection{\textcolor{titleblue}{Work Experience}}
   \resumeSubHeadingListStart
 
     \resumeSubheading
       {QI-ANXIN Technology Research Institute}{Beijing, China}
-      {Research and Development Engineer, Supervisor: \textbf{Lingyun Ying}}{Aug 2019 - Aug 2022}
-      \resumeItemListStart
-        \resumeItem{MacOS Sandbox for Malware Analysis}
-          { Designed and implemented the \textbf{first} macOS sandbox system in China. For macOS versions below 10.15, I read the source code of \textbf{XNU kernel}, used the Mandatory Access Control Framework(\textbf{MACF}) to monitor \textbf{process behavior} and \textbf{file operations}, wrote Network Kernel Extension(\textbf{NKE}) to capture \textbf{network traffic and behavior} respectively, and use threaded to send the monitoring data from kernel mode to user mode, and wrote a client at user mode to receive the behavior data from kernel mode. For macOS versions 10.15 and above, the previous mechanism was deprecated, so I developed a new system using the EndPoint Security Framework(\textbf{ESF}) and Network Extension(\textbf{NE}) for monitoring and capturing behavioral data. \textbf{Apple Script} was used to write a dynamic traversal tool for macOS apps to simulate user interaction and trigger malicious behavior. }
-        \resumeItem{Static and Dynamic Analysis Tool for Android Apps}
-          { Developed a static analysis tool based on \textbf{AndroGuard}, with the same analysis capability as \textbf{VirusTotal}. Combined the depth-first search(\textbf{DFS}) algorithm and breadth-first search(\textbf{BFS}) algorithm to traverse the UI of Android App.}
-        \resumeItem{Continuous Fuzzing Platform}
-          { A \textbf{fuzzing infrastructure} is used to schedule and allocate resources, perform \textbf{continuous} and \textbf{large-scale} fuzzing of target software, and obtain various monitoring data and performance metrics. Various frameworks and middleware are used, such as MongoDB, InfluxDB, Fluentd, Redis, Amazon S3. Integrated multiple \textbf{fuzzing engines}, and supports fuzzing multiple targets on multiple operating system platforms.  }
-        \resumeItem{TianWen: Dependency Analysis Platform for Software Supply Chain}
-          { Developed a crawler to continuously crawl software binaries. Built and deployed \textbf{graph database cluster}. Optimized database query performance to support querying \textbf{extremely complex} graph information in seconds, and wrote tools to visualize large amounts of graph data.  }
-        \resumeItem{CVE Information Extraction Tool}
-          { Based on Named Entity Recognition(\textbf{NER}) theory, we use \textbf{BiLSTM-CRF} model to extract the \textbf{vulnerability function}, \textbf{vulnerability version} and \textbf{vulnerability source path} from the unstructured official description information of CVE vulnerabilities, with an accuracy rate of about \textbf{88\%}. }
-		\resumeItem{pySnoopSnitch: Android Firmware Patch Existence Detection Tool}
-          { Rewrote the \textbf{SnoopSnitch} project code in Python. Supports checking the presence of patches in Android firmware using the \textbf{full core performance} of the server and generating a heat map of patch misses. }
-%        \resumeItem{String filter}
-%          { A tool for filtering strings dumped from memory which contain a large number of strings that are neither recognizable nor readable by humans, and also contain many duplicate strings that we don't care about that are contained in dependent libraries. I combine \textbf{Shannon entropy} and \textbf{Markov chains} to filter strings, and use \textbf{bloom filters} to filter library strings with excellent time and space efficiency. }
-      \resumeItemListEnd
+      {Research and Development Engineer, Mentor: Dr. Lingyun Ying}{Aug 2019 - Aug 2022}
+      \begin{itemize}[label=\textbullet, leftmargin=+6pt]
+        % \itemsep -0em 
+        \item Designed a macOS sandBox system to analyze malware behavior and network traffic.
+        \item Developed an infrastructure for large-scale continuous fuzzing.
+        \item Developed static analysis and UI automation testing tools for Android applications.
+        \item Maintained and optimized a graph database cluster for efficient component dependency analysis. 
+        \item Implemented an Android firmware patch existence verification tools.
+        \item Applied BiLSTM-CRF model to extract vulnerability information from CVE text descriptions.
+      \end{itemize}
 
     \resumeSubheading
       {Institute of Information Engineering, Chinese Academy of Sciences}{Beijing, China}
-      {Research Intern, Supervisor: \textbf{Feng Li}}{Jul 2018 - Sep 2018}
-      \resumeItemListStart
-        \resumeItem{IO2BO Vulnerability Automatic Detection}
-          { Performed the \textbf{infra-procedural} analysis and \textbf{inter-procedural} analysis on the source code based on \textbf{Klee}. Modified the Klee to read target files as input for \textbf{concolic execution}. When executing, add constraints to the state that may have vulnerabilities and pass the symbolic expression to the \textbf{constraint solver}, and determine whether there is an Integer-Overflow-to-Buffer-Overflow(\textbf{IO2BO}) vulnerability based on the result. }
-      \resumeItemListEnd
+      {Research Intern, Advisor: Feng Li}{Jul 2018 - Sep 2018}
+      \begin{itemize}[label=\textbullet, leftmargin=+6pt]
+        \item Detected IO2BO vulnerability using concolic execution. 
+      \end{itemize}
 
   \resumeSubHeadingListEnd
-  
+
+\shorterSection{\textcolor{titleblue}{Community Service}}
+  \resumeSubHeadingListStart
+    \resumeSubItem{External Reviewer} { \\
+      \experience{USENIX Security Symposium (USENIX Security)}{2025}  \\
+      \experience{Network and Distributed System Security Symposium (NDSS)}{2023, 2024, 2025} \\
+      \experience{ACM Conference on Computer and Communications Security (CCS)}{2022, 2024} \\
+    } 
+
+    \vspace{+10pt}
+
+    \resumeSubItem{Teaching Assistant} { \\
+      \experience{IST 454 Computer and Cyber Forensics}{Fall 2023, Fall 2024} \\
+    }
+
+    \vspace{+10pt}
+  \resumeSubHeadingListEnd
+
+
+
 %-----------PROJECTS/SKILLS-----------------
 \shorterSection{\textcolor{titleblue}{Projects}}
   \resumeSubHeadingListStart
-    \resumeSubItem{CTF Wiki}
-     {
-     The CTF Wiki is an open source knowledge base about CTF competitions. I contributed most of the content of the \textbf{reverse engineering} chapter of the Wiki (\href{https://github.com/ctf-wiki/ctf-wiki}{\textcolor{linkblue}{github}}, 7.1k stars)
-     }
-    \resumeSubItem{Awesome-Binary-Similarity}
-      { An awesome list of binary code similarity papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Similarity}{\textcolor{linkblue}{github}}, 359 stars)
-	}
-    \resumeSubItem{Awesome-Binary-Rewriting}
-      { An awesome list of binary rewriting papers (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Rewriting}{\textcolor{linkblue}{github}}, 172 stars)
-	}
-	\resumeSubItem{PyPi-Typosquatting-Graph}
-     { Analyzing and visualizing \textbf{typosquatting} for Python packages hosted on PyPi.org.  I obtained all python package names and created a \textbf{trie tree}, then calculated the \textbf{edit distance} between the names and used a \textbf{force-directed algorithm} to draw the graph   (\href{https://github.com/Vancir/PyPi-Typosquatting-Graph}{\textcolor{linkblue}{github}})}
-    \resumeSubItem{Fugitive Consortium}
-      { A blockchain platform based on \textbf{Hyperledger Fabric}. It is written in Java and starts a network topology consisting of docker containers. Chaincode is written to add, delete, query and change information in the ledger  (\href{https://github.com/Vancir/fugitivec}{\textcolor{linkblue}{github}})
-	}
+    \resumeSubItem{CTF Wiki} {%
+      The CTF Wiki is an open source knowledge base about CTF competitions
+      (\href{https://github.com/ctf-wiki/ctf-wiki}{\textcolor{linkblue}{github}}, 8.4k stars).
+    }
+
+    \resumeSubItem{Awesome-Binary-Similarity} {%
+      An awesome list of binary code similarity papers
+      (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Similarity}{\textcolor{linkblue}{github}}, 534 stars).
+    }
+
+    \resumeSubItem{Awesome-Binary-Rewriting} {%
+      An awesome list of binary rewriting papers
+      (\href{https://github.com/SystemSecurityStorm/Awesome-Binary-Rewriting}{\textcolor{linkblue}{github}}, 227 stars).
+    }
+
+    \resumeSubItem{PyPi-Typosquatting-Graph} {%
+      Analyzing and visualizing typosquatting for Python packages hosted on PyPi.org
+      (\href{https://github.com/Vancir/PyPi-Typosquatting-Graph}{\textcolor{linkblue}{github}}).
+    }
+
+    % \resumeSubItem{Fugitive Consortium}
+    %   { A blockchain platform based on \textbf{Hyperledger Fabric}. It is written in Java and starts a network topology consisting of docker containers. Chaincode is written to add, delete, query and change information in the ledger  (\href{https://github.com/Vancir/fugitivec}{\textcolor{linkblue}{github}})
+    % }
 
   \resumeSubHeadingListEnd
   
   
-  
+\shorterSection{\textcolor{titleblue}{Vulnerability Discovered}}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Adobe Acrobat Reader}{%
+      \href{https://nvd.nist.gov/vuln/detail/cve-2023-21610}{\textcolor{linkblue}{CVE-2023-21610}}
+    }
+
+    \resumeSubItem{SQLite} {%
+      \bug{bc39e531e5fb9407}
+      \bug{591006b1ccc2cd01}
+      \bug{79cf371080}
+      \bug{8cc1dc0fe9b7308c}
+      \bug{1d9ac01fcec24487}
+      \bug{a43074729e}
+      \bug{5522082cfc}
+      \bug{77c4f79270}
+      \bug{5275207102}
+      \bug{9b491e1deb}
+      \bug{07de5f6216}
+      \bug{38dceb5cb8}
+      \bug{bad532820c}
+      \bug{f5a2b1db87}
+      \bug{dcd5f35496}
+      \bug{40e08497b037f257}
+      \bug{dc16ec63d3}
+      \bug{0713a16a44}
+      \bug{cae4367d9b}
+      \bug{6e26dcf544}
+      \bug{ab93a23ba1}
+      \bug{b15f5e3ad83372c5}
+      \bug{0b53708c95}
+      \bug{6c5678e3da}
+      \bug{0d48347967}
+      \bug{ff3840145a}
+      \bug{6916dacf83}
+      \bug{a19bb49140}
+      \bug{679b4de86e}
+      \bug{82a88f5812}
+      \bug{a19cd39913}
+      \bug{3374b58840}
+      \bug{ba24e1ccc5}
+      \bug{5180af725f1cc375}
+      \bug{2e5131839365682a}
+      \bug{b3085d0537}
+      \bug{19b217bfe709a072}
+      \bug{d03345d572713fe6}
+      \bug{4dcc24dc12}
+      \bug{4fd46cf352}
+      \bug{31d3c004c4}
+      \bug{6c118daad0}
+      \bug{f0e872fcee}
+      \bug{726c4f7db0}
+      \bug{fb6811c2f9}
+      \bug{6f08fa9dfe}
+      \bug{8a22c0bfa7}
+      \bug{4326cdf292}
+      \bug{537d8ab118}
+      \bug{f03f1e4c5a}
+      \bug{4ef9b37d74}
+      \bug{7ed4a250d3}
+      \bug{29a47cf6d1}
+      \bug{8130545bc6}
+      \bug{0f37727c0d}
+      \bug{43cbfc4d23}
+      \bug{f50aecd5e8}
+      \bug{b901808856}
+    }
+    \vspace{+20pt}
+  \resumeSubHeadingListEnd
+
 %-------------------------------------------
 \end{document}
