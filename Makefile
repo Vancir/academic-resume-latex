@@ -2,13 +2,13 @@
 
 # Main file name without extension
 CV = cv
-SRC = $(wildcard *.tex)
+SRC = $(wildcard src/*.tex)
 
 all: $(CV).pdf
 
 # Build PDF from LaTeX
 $(CV).pdf: $(SRC)
-	pdflatex $(CV).tex
+	pdflatex src/$(CV).tex
 
 # Clean auxiliary files and PDF
 clean:
