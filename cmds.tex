@@ -1,0 +1,40 @@
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeItemNoBullet}[2]{
+	\item[]\small{
+		\hspace{-9pt}\textbf{#1}{: #2 \vspace{-6pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-1pt}\item[]
+	\begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+		\hspace{-10pt}\textbf{#1} & #2 \\
+		\hspace{-10pt}\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\experience}[2]{
+	\vspace{+1pt}\item[]
+	\begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+		#1 & [#2]
+	\end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+		\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% custom commands
+\newcommand{\shorterSection}[1]{\vspace{-10pt}\section{#1}}
