@@ -2,6 +2,10 @@
 \newcounter{sqliteBugCounter}
 \newcommand{\sqlitebug}[1]{\stepcounter{sqliteBugCounter}\href{https://sqlite.org/forum/info/#1}{\textcolor{linkblue}{[\thesqliteBugCounter]}}\>}
 
+\newcommand{\issue}[2]{%
+	\href{https://github.com/#1/issues/#2}{\textcolor{linkblue}{\##2}}%
+}
+
 %-----------Bug Reports-----------------
 \shorterSection{\textcolor{titleblue}{Vulnerability Discovered}}
 \resumeSubHeadingListStart
@@ -69,5 +73,11 @@
 	\sqlitebug{f50aecd5e8}
 	\sqlitebug{b901808856}
 }
+
+\resumeSubItem{ModelScope}{%
+	\issue{modelscope/modelscope}{1454}
+	\issue{modelscope/modelscope}{1455}
+}
+
 \vspace{+20pt}
 \resumeSubHeadingListEnd

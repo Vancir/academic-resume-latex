@@ -2,12 +2,13 @@
 
 # Main file name without extension
 RESUME = resume
+SRC = $(wildcard *.tex)
 
 # Default target
 all: $(RESUME).pdf
 
 # Build PDF from LaTeX
-$(RESUME).pdf: $(RESUME).tex
+$(RESUME).pdf: $(SRC)
 	pdflatex $(RESUME).tex
 
 # Clean auxiliary files and PDF
