@@ -1,17 +1,16 @@
 # Makefile for LaTeX build and clean
 
 # Main file name without extension
-RESUME = resume
+CV = cv
 SRC = $(wildcard *.tex)
 
-# Default target
-all: $(RESUME).pdf
+all: $(CV).pdf
 
 # Build PDF from LaTeX
-$(RESUME).pdf: $(SRC)
-	pdflatex $(RESUME).tex
+$(CV).pdf: $(SRC)
+	pdflatex $(CV).tex
 
 # Clean auxiliary files and PDF
 clean:
 	rm -f *.aux *.log *.out *.toc *.lof *.lot *.fls *.fdb_latexmk
-	rm -f $(RESUME).pdf
+	rm -f $(CV).pdf
